@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pong demo></title>
+    <script src="https://www.gstatic.com/swiffy/v7.0/runtime.js"></script>
+
+
+<style media="all"> @import url(http://fonts.googleapis.com/css?family=Lobster=3d-float|ice);
+   @import (http://fonts.googleapis.com/css?family=Audiowide:400,700,900,400italic,700italic,900italic|Roboto+Serif:400,500,600,800,400bold,700bold,700,400italic,700italic;effect=3d|fire);
+body{
+  font-size:1rem;
+  background-color:silver;
+  font-family:'Lobster';
+  padding-top:100px;
+  }
+   .iframe-wrap .meta-overlay h2{text-align:center;color:rgba(255,255,255,.1);background:-webkit-gradient(linear,left top,right top,from(#222),to(#222),color-stop(0.5,#fff)) 0 0/125px 100%;background:-moz-gradient(linear,left top,right top,from(#222),to(#222),color-stop(0.5,#fff)) 0 0/125px 100%;background:gradient(linear,left top,right top,from(#222),to(#222),color-stop(0.5,#fff)) 0 0/125px 100%;-webkit-background-size:125px 100%;-moz-background-size:125px 100%;-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;-webkit-animation-name:shimmer;-moz-animation-name:shimmer;animation-name:shimmer;-webkit-animation-duration:2s;-moz-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-iteration-count:infinite}@-moz-keyframes shimmer{0%{background-position:top left}100%{background-position:top right}}@-webkit-keyframes shimmer{0%{background-position:top left}100%{background-position:top right}}@-o-keyframes shimmer{0%{background-position:top left}100%{background-position:top right}}@keyframes shimmer{0%{background-position:top left}100%{background-position:top right}}.explore-tabs{background:-moz-linear-gradient(0deg,rgba(26,26,27,0),rgba(26,26,27,0) 40%,#2b2b2b),-moz-linear-gradient(270deg,rgba(51,51,51,0),#111);background:-webkit-linear-gradient(0deg,rgba(26,26,27,0),rgba(26,26,27,0) 40%,#2b2b2b),-webkit-linear-gradient(270deg,rgba(51,51,51,0),#111);background:linear-gradient(90deg,rgba(26,26,27,0),rgba(26,26,27,0) 40%,#2b2b2b),linear-gradient(180deg,rgba(51,51,51,0),#111);box-shadow:none;border:none}.explore-tabs a:first-child{padding-left:12px}.explore-tabs a.active{text-transform:uppercase;font-weight:400;color:#fff}#single_collection_13920{box-shadow:none;opacity:0;background-color:transparent;color:transparent}body{background: #2b2b2b;background: url(http://spaceengine.org/_ph/5/999267748.jpg) left top fixed;background-repeat: no-repeat;background-attachment: auto fixed;background-size: 100%;background-size: cover;background-color: rgba(0,0,0, 0.50);z-index: 1;}.main-header{border:none;background:-moz-linear-gradient(top,#e5e5ef,#2b2b2b);background:-webkit-linear-gradient(top,#e5e5ef,#2b2b2b);background:linear-gradient(to bottom,#e5e5ef,#2b2b2b)}.avatar-wrap .profile-avatar{box-shadow:none}.button{border:none;border-radius:2px;box-shadow:none;background:0 0}.top-button{box-shadow:none;background:0 0}
+    </style>
+
+    <script>
+      swiffyobject = {"internedStrings":["playerscore","resetBall","computerscore","bounce","hitball","playerpaddle","bottom","computerpaddle","paddle"],"tags":[{"type":9,"actions":[{"constants":["range","angle","Math","random","vx","vy","cos","sin","ball","_x","right","#8","skiphit","ydiff","_y","xdiff","hit","abs","_height","_width","#3","top","#6","left","#0","#2","#1"],"type":136},{"value":"#1","type":305},{"body":[{"index":0,"type":304},{"value":0.7853981633974483,"type":305},{"type":60},{"index":1,"type":304},{"value":0,"type":305},{"index":2,"type":304},{"type":28},{"index":3,"type":304},{"type":82},{"index":0,"type":304},{"type":28},{"type":12},{"index":0,"type":304},{"type":28},{"value":2,"type":305},{"type":13},{"type":71},{"type":60},{"value":0,"type":305},{"index":4,"type":304},{"type":28},{"type":72},{"type":18},{"target":30,"type":157},{"index":1,"type":304},{"value":3.141592653589793,"type":305},{"index":1,"type":304},{"type":28},{"type":11},{"type":29},{"value":0,"type":305},{"index":5,"type":304},{"type":28},{"type":72},{"type":18},{"target":42,"type":157},{"index":1,"type":304},{"value":0,"type":305},{"index":1,"type":304},{"type":28},{"type":11},{"type":29},{"index":4,"type":304},{"index":1,"type":304},{"type":28},{"value":1,"type":305},{"index":2,"type":304},{"type":28},{"index":6,"type":304},{"type":82},{"value":8,"type":305},{"type":12},{"type":29},{"index":5,"type":304},{"index":1,"type":304},{"type":28},{"value":1,"type":305},{"index":2,"type":304},{"type":28},{"index":7,"type":304},{"type":82},{"value":8,"type":305},{"type":12},{"type":29},{"index":8,"type":304},{"type":28},{"index":9,"type":304},{"index":10,"type":304},{"type":28},{"value":2,"type":305},{"type":13},{"type":79}],"args":[],"type":155},{"type":60},{"value":"#4","type":305},{"body":[{"index":11,"type":304},{"type":28},{"index":12,"type":304},{"type":78},{"type":18},{"target":17,"type":157},{"index":11,"type":304},{"type":28},{"index":12,"type":304},{"index":11,"type":304},{"type":28},{"index":12,"type":304},{"type":78},{"type":81},{"type":79},{"type":306},{"type":62},{"index":13,"type":304},{"index":11,"type":304},{"type":28},{"index":14,"type":304},{"type":78},{"index":8,"type":304},{"type":28},{"index":14,"type":304},{"type":78},{"type":11},{"type":60},{"index":15,"type":304},{"index":11,"type":304},{"type":28},{"index":9,"type":304},{"type":78},{"index":8,"type":304},{"type":28},{"index":9,"type":304},{"type":78},{"type":11},{"type":60},{"index":16,"type":304},{"index":13,"type":304},{"type":28},{"value":1,"type":305},{"index":2,"type":304},{"type":28},{"index":17,"type":304},{"type":82},{"index":11,"type":304},{"type":28},{"index":18,"type":304},{"type":78},{"index":8,"type":304},{"type":28},{"index":18,"type":304},{"type":78},{"type":71},{"value":2,"type":305},{"type":13},{"type":72},{"type":76},{"type":18},{"target":82,"type":157},{"type":23},{"index":15,"type":304},{"type":28},{"value":1,"type":305},{"index":2,"type":304},{"type":28},{"index":17,"type":304},{"type":82},{"index":11,"type":304},{"type":28},{"index":19,"type":304},{"type":78},{"index":8,"type":304},{"type":28},{"index":19,"type":304},{"type":78},{"type":71},{"value":2,"type":305},{"type":13},{"type":72},{"type":60},{"index":16,"type":304},{"type":28},{"type":18},{"target":112,"type":157},{"index":4,"type":304},{"index":4,"type":304},{"type":28},{"value":0,"type":305},{"index":20,"type":304},{"type":28},{"type":11},{"type":12},{"type":29},{"index":5,"type":304},{"index":5,"type":304},{"type":28},{"index":11,"type":304},{"type":28},{"index":13,"type":304},{"type":78},{"value":50,"type":305},{"type":13},{"type":71},{"type":29},{"index":11,"type":304},{"type":28},{"index":12,"type":304},{"value":10,"type":305},{"type":79}],"args":["#8"],"type":155},{"type":60},{"index":20,"type":304},{"value":1,"type":305},{"type":29},{"index":21,"type":304},{"value":0,"type":305},{"type":29},{"index":22,"type":304},{"value":300,"type":305},{"type":29},{"index":23,"type":304},{"value":0,"type":305},{"type":29},{"index":10,"type":304},{"value":500,"type":305},{"type":29},{"index":24,"type":304},{"value":0,"type":305},{"type":29},{"index":25,"type":304},{"value":0,"type":305},{"type":29},{"index":1,"type":304},{"value":0,"type":305},{"type":29},{"value":0,"type":305},{"index":26,"type":304},{"type":61},{"type":23}]},{"bounds":[{"ymin":-30,"ymax":6030,"xmin":-30,"xmax":10030}],"id":1,"paths":[{"data":[":000j000fa000J:a:000Fa000j:a:000f"],"line":0}],"flat":true,"linestyles":[{"color":[-1],"width":[60]}],"type":1},{"id":1,"matrix":0,"type":3,"depth":1},{"bounds":[{"ymin":-540,"ymax":540,"xmin":-130,"xmax":130}],"id":2,"fillstyles":[{"color":[-3021],"type":1}],"paths":[{"fill":0,"data":[":0j10Ea:20ja0T:a:20Ja0t:"],"line":0}],"linestyles":[{"color":[-133021],"width":[60]}],"type":1},{"tags":[{"id":2,"matrix":0,"type":3,"depth":1},{"type":2}],"id":3,"frameCount":1,"type":7},{"id":3,"name":"#5","matrix":"::::459i850b","type":3,"actions":[{"events":64,"actions":[{"constants":["ydiff","_root","_ymouse",""],"type":136},{"index":0,"type":304},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"index":3,"type":304},{"value":1,"type":305},{"type":34},{"type":11},{"type":29},{"index":3,"type":304},{"value":1,"type":305},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"type":35}],"key":0}],"depth":2},{"tags":[{"id":2,"matrix":0,"type":3,"depth":1},{"type":2}],"id":4,"frameCount":1,"type":7},{"id":4,"name":"#7","matrix":"::::99e710b","type":3,"actions":[{"events":64,"actions":[{"constants":["limit","_root","#0","ydiff","ball","_y","this"],"type":136},{"index":0,"type":304},{"value":3,"type":305},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"value":10,"type":305},{"type":13},{"type":71},{"type":29},{"index":3,"type":304},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"type":78},{"index":5,"type":304},{"type":78},{"index":6,"type":304},{"type":28},{"index":5,"type":304},{"type":78},{"type":11},{"type":29},{"index":0,"type":304},{"type":28},{"index":3,"type":304},{"type":28},{"type":72},{"type":18},{"target":36,"type":157},{"index":3,"type":304},{"index":0,"type":304},{"type":28},{"type":29},{"target":51,"type":153},{"index":3,"type":304},{"type":28},{"value":0,"type":305},{"index":0,"type":304},{"type":28},{"type":11},{"type":72},{"type":18},{"target":51,"type":157},{"index":3,"type":304},{"value":0,"type":305},{"index":0,"type":304},{"type":28},{"type":11},{"type":29},{"index":6,"type":304},{"type":28},{"index":5,"type":304},{"index":6,"type":304},{"type":28},{"index":5,"type":304},{"type":78},{"index":3,"type":304},{"type":28},{"type":71},{"type":79}],"key":0}],"depth":4},{"bounds":[{"ymin":-130,"ymax":130,"xmin":-130,"xmax":130}],"id":5,"fillstyles":[{"color":[-1330021],"type":1}],"paths":[{"fill":0,"data":[":0j:b:1d0C0gb9B0c0G0cb1D:1G0Cb9B9B9B0Gb:1D9b1Gb0c9B1g9Bb1d:0g9bb0c0c0c1g"],"line":0}],"linestyles":[{"color":[-1330021],"width":[60]}],"type":1},{"tags":[{"id":5,"matrix":0,"type":3,"depth":1},{"type":2}],"id":6,"frameCount":1,"type":7},{"id":6,"name":"ball","matrix":"::::000e000c","type":3,"actions":[{"events":64,"actions":[{"constants":["_root","this","_x","vx","_y","vy","top","#3","#6","left","right","#5","#4","#7","#1","#0","#2"],"type":136},{"index":0,"type":304},{"type":28},{"body":[{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"index":3,"type":304},{"type":28},{"type":71},{"type":79},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"type":78},{"index":5,"type":304},{"type":28},{"type":71},{"type":79},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"type":78},{"index":6,"type":304},{"type":28},{"type":72},{"type":18},{"target":46,"type":157},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"index":6,"type":304},{"type":28},{"type":79},{"index":5,"type":304},{"index":5,"type":304},{"type":28},{"value":0,"type":305},{"index":7,"type":304},{"type":28},{"type":11},{"type":12},{"type":29},{"index":8,"type":304},{"type":28},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"type":78},{"type":72},{"type":18},{"target":70,"type":157},{"index":1,"type":304},{"type":28},{"index":4,"type":304},{"index":8,"type":304},{"type":28},{"type":79},{"index":5,"type":304},{"index":5,"type":304},{"type":28},{"value":0,"type":305},{"index":7,"type":304},{"type":28},{"type":11},{"type":12},{"type":29},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"index":9,"type":304},{"type":28},{"type":72},{"type":18},{"target":94,"type":157},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"index":9,"type":304},{"type":28},{"type":79},{"index":3,"type":304},{"index":3,"type":304},{"type":28},{"value":0,"type":305},{"index":7,"type":304},{"type":28},{"type":11},{"type":12},{"type":29},{"index":10,"type":304},{"type":28},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"type":72},{"type":18},{"target":118,"type":157},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"index":10,"type":304},{"type":28},{"type":79},{"index":3,"type":304},{"index":3,"type":304},{"type":28},{"value":0,"type":305},{"index":7,"type":304},{"type":28},{"type":11},{"type":12},{"type":29},{"index":11,"type":304},{"type":28},{"value":1,"type":305},{"index":12,"type":304},{"type":61},{"type":23},{"index":13,"type":304},{"type":28},{"value":1,"type":305},{"index":12,"type":304},{"type":61},{"type":23},{"value":5,"type":305},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"type":72},{"type":18},{"type":18},{"target":148,"type":157},{"value":0,"type":305},{"index":14,"type":304},{"type":61},{"type":23},{"index":15,"type":304},{"index":15,"type":304},{"type":28},{"type":80},{"type":29},{"index":1,"type":304},{"type":28},{"index":2,"type":304},{"type":78},{"value":495,"type":305},{"type":72},{"type":18},{"type":18},{"target":166,"type":157},{"value":0,"type":305},{"index":14,"type":304},{"type":61},{"type":23},{"index":16,"type":304},{"index":16,"type":304},{"type":28},{"type":80},{"type":29}],"type":148}],"key":0}],"depth":6},{"id":7,"bold":true,"name":"Arial","type":5},{"indent":0,"font":7,"rightMargin":0,"type":13,"mode":0,"sharpness":0,"id":8,"bounds":{"ymin":-40,"ymax":1280,"xmin":-40,"xmax":1680},"gridFit":0,"height":560,"leading":40,"selectable":true,"thickness":0,"leftMargin":0,"variable":"#2"},{"id":8,"matrix":"::::0j0d","type":3,"depth":8},{"indent":0,"font":7,"rightMargin":0,"align":1,"type":13,"mode":0,"sharpness":2,"id":9,"bounds":{"ymin":-40,"ymax":1320,"xmin":-40,"xmax":1861},"gridFit":0,"height":560,"leading":40,"selectable":true,"thickness":0,"leftMargin":50,"variable":"#0"},{"id":9,"matrix":"::::139h0d","type":3,"depth":9},{"type":2}],"fileSize":2295,"v":"7.0.0","backgroundColor":-0016619999,"frameSize":{"ymin":0,"ymax":6000,"xmin":0,"xmax":10000},"frameCount":1,"frameRate":36,"version":5};
+    </script>
+    <style>html, body {width: 100%; height: 100%}</style>
+        <style>.Absolute-Center { 
+  height: 50%; /* Set your own height: percents, ems, whatever! */
+  width: 50%; /* Set your own width: percents, ems, whatever! */
+  overflow: auto; /* Recommended in case content is larger than the container */
+  margin: auto; /* Center the item vertically & horizontally */
+  position: absolute; /* Break it out of the regular flow */
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+}
+
+
+/* //////////////////////////////////////// */
+/* Make sure our center blocks stay in their container! */
+.Center-Container { position: relative; }
+
+
+/* //////////////////////////////////////// */
+/* Fixed floating element within viewport */
+.Absolute-Center.is-Fixed { 
+  position: fixed;
+  z-index: 999;
+}
+    </style>
+  </head>
+
+  
+  <body style="margin: 0; overflow: hidden">
+  
+    
+    
+    <div id="wrapper" class="Absolute-Center Center-Container Is-Fixed" style="width: 1000px; height: 6000px; overflow:auto;">
+      <header> <style>header,a{color:#eee;background-color:rgba(200,200,200,0.2);}</style>
+       
+       
+<a href="https://twitter.com/intent/tweet?via=rayanthonyrcc&text=free%20fun%20game%20by%20rayanthony" class="twitter-mention-button" data-size="large" data-related="rayanthonyrcc">Tweet @rayanthonyrcc</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> coded by : 
+ <a href="http://rayantony.com"> ray anthony</a>
+
+<a href="http://rayanthony.io">http://rayanthony.io</a>
+        </Header>
+  <div id="swiffycontainer" style="width: 960px; height: 570px; overflow:hide;">
+    </div>
+    <script>
+      
+      var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+          swiffyobject, {  });
+      
+      stage.start();
+    </script>
+</div>
+
+
+ </div>
+
+
+
+
+  </body>
+</html>
