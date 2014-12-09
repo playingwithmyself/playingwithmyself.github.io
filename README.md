@@ -1,11 +1,16 @@
-[Rays Stupid Games](http://playingwithmyself.github.io)
+[Rays Stupid Games](http://playingwithmyself.github.io) <img src="https://avatars0.githubusercontent.com/u/10105599?v=3&s=200">
 =======================================================
 
 ### Rays Stupid Games: A repo of basic stupid games mostly by [ray anthony (me)](@rayantony)
 
-#### Now Featuring: [Pong, ...in SPACE!](http://playingwithmyself.github.io/games/pong.html) 
-Seeking a new life, and new civilizations pong is boldy going where so many cliches, already have Space!
+___
 
+#### Now Featuring: [Pong, ...in SPACE!](http://playingwithmyself.github.io/games/pong.html) 
+Seeking a new life, and new civilizations pong is boldy going where so many cliches, already have, Space!
+
+___
+
+### Huh?
 Exactly what is sounds like, pretty much whackin' it. Anything in here is scrounged up as the throw away remnants of god knows what other project to which they were in some way relevant at one time. A code recycle bin/testing ground Sounds F***'n Awesome right! If for whatever reason it gets action I'll make the effort to put something worthwhile in it. 
 
 I can be reached for comment care of "mr Blue" as in, me holding my breath ;) 
